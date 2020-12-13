@@ -14,7 +14,6 @@ public class Percolation {
 
 	//creates n-by-n grid, with all sites initially blocked
 	public Percolation(int n) {
-		if (n < 1) throw new IllegalArgumentException("Illegal argument");
 		this.Grid = new int[n+1][n+1];
 		this.State = new boolean[n*n+1];
 		this.n = n;
@@ -24,7 +23,7 @@ public class Percolation {
 		this.VirtualBottom = n*n + 1;
 		int num = 1;
 		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= n; j++) { 
+			for (int j = 1; j <= n; j++) {
 				this.Grid[i][j] = num;
 				this.State[num] = false;
 				if (i == 1) this.Union.union(num, VirtualTop);
@@ -61,7 +60,7 @@ public class Percolation {
 			unite(this.Grid[row][col], this.Grid[row][col+1]);
 	}
 
-	
+
 	// is the site (row, col) open?
 	public boolean isOpen(int row, int col) { 
 		checkBounds(row);
