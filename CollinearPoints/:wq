@@ -1,0 +1,12 @@
+public class FastCollinearPoints {
+	public FastCollinearPoints(Points[] points) {
+	}
+
+	public int numberOfSegments() {
+		return amount;
+	}
+
+	public LineSegment[] segments() {
+		return segmentArr;
+	}
+}
